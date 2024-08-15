@@ -1,0 +1,18 @@
+<div class="overlay" id="overlay" (click)="fecharMenu()"></div>
+<header class="cabecalho">
+  <button class="btn_mobile" (click)="abrirMenu()"><img src="/assets/menuMobile.png"></button>
+  <aside class="cabecalho_mobile" id="menuMobile">
+    <button class="btn_mobile_fechar" (click)="fecharMenu()">X</button>
+    <nav class="mobile_nav">
+      <a class="cabecalho_nav_item mobile" href="#sobre">Sobre</a>
+      <a class="cabecalho_nav_item mobile" href="#servicos">Serviços</a>
+      <a class="cabecalho_nav_item mobile" href="#portifolio">Portifólio</a>
+    </nav>
+  </aside>
+  <img class="cabecalho_logo" src="/assets/logoL.png">
+  <nav class="cabecalho_nav">
+    <a class="cabecalho_nav_item pc active" href="#sobre">Sobre</a>
+    <a class="cabecalho_nav_item pc" href="#servicos">Serviços</a>
+    <a class="cabecalho_nav_item pc" href="#portifolio">Portifólio</a>
+  </nav>
+</header>

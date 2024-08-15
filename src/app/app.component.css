@@ -1,0 +1,23 @@
+mat-divider{
+  width: 99%;
+}
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 110px;
+  max-width: 100%;
+}
+
+@media (width <= 450px){
+  main{
+    gap: 50px;
+  }
+}
+
+
+
+
+
+

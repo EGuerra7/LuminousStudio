@@ -1,0 +1,154 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.services{
+  scroll-margin-top: 115px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-m);
+  color: var(--cor-principal);
+  max-width: 100%;
+}
+.service_title{
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.service_text{
+  font-size: 24px;
+  text-align: center;
+  width: 80%;
+  line-height: 1.2em;
+}
+
+.services_solo{
+  display: flex;
+  gap: 130px;
+  padding: 0 7em;
+}
+
+.solo_foto{
+  width: 400px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.599);
+}
+
+.services_solo_text{
+  height: 100%;
+  display: flex;
+  font-family: var(--fonte-m);
+  flex-direction: column;
+  gap: 60px;
+  text-align: center;
+  color: var(--cor-principal);
+}
+
+.solo_title{
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+}
+
+.solo_name{
+  font-size: 38px;
+  font-weight: 300;
+  margin: 0;
+}
+.solo_type{
+  font-size: 25px;
+  color: var(--cor-secundaria);
+}
+.solo_text{
+  font-size: 26px;
+  line-height: 1.3em;
+  margin-bottom: 2em;
+}
+.services_solo_botoes{
+  display: flex;
+  gap: 30px;
+  justify-content: end;
+}
+
+.services_solo_botoes_inv{
+  display: flex;
+  gap: 30px;
+  justify-content: start;
+}
+
+.services_solo_botoes a, .services_solo_botoes_inv a{
+  display: flex;
+  align-items: center;
+  background-color: var(--cor-secundaria);
+  padding: 10px 15px;
+  border-radius: 30px;
+  transition: .3s ease;
+
+  &:hover{
+    background-color: transparent;
+  }
+}
+.services_solo_botoes a img, .services_solo_botoes_inv a img{
+  width: 30px;
+}
+
+@media (width <= 1450px){
+  .solo_foto{
+    width: 300px;
+    height: 310px;
+  }
+  .services_solo_text{
+    gap: 20px;
+  }
+  .solo_text{
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+}
+
+@media (width <= 1150px){
+  .services_solo{
+    padding: 0 2em;
+  }
+}
+
+@media (width <= 930px){
+  .services_solo_text{
+    gap: 10px;
+  }
+  .services_solo_botoes_inv, .services_solo_botoes {
+    justify-content: center;
+  }
+  .services_solo_botoes a img, .services_solo_botoes_inv a img{
+    width: 25px;
+  }
+}
+
+@media (width <= 833px){
+  .services_solo{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+  }
+  .invert{
+    flex-direction: column-reverse;
+  }
+}
+
+@media (width <= 403px){
+  .solo_foto{
+    width: 220px;
+    height: 230px;
+  }
+  .services_solo{
+    padding: 0 5px;
+  }
+}
+
+
+

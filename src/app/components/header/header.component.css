@@ -1,0 +1,148 @@
+@keyframes abrirMenu{
+  0%{
+    width: 0;
+  } 100%{
+    width: 50%;
+  }
+}
+
+@keyframes fecharMenu{
+  0%{
+    width: 50%;
+  } 100% {
+    width: 0;
+  }
+}
+
+
+
+
+.cabecalho{
+  background-color: var(--cor-principal);
+  display: flex;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 5%;
+  font-family: var(--fonte-p);
+}
+.cabecalho_logo{
+  width: 45px;
+}
+.cabecalho_nav{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.cabecalho_nav_item{
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--cor-nav);
+  transition: .2s ease;
+
+  &:hover{
+    color: var(--cor-secundaria);
+  }
+}
+
+.cabecalho_nav_item.active{
+  border-bottom: 2px solid var(--cor-secundaria);
+}
+
+.btn_mobile{
+  display: none;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 1.12em;
+  transition: .2s;
+
+  &:hover{
+    background-color: var(--cor-secundaria);
+  }
+}
+.btn_mobile img{
+  width: 24px;
+}
+.cabecalho_mobile{
+  display: none;
+  flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 3em;
+    z-index: 4;
+    border-radius: 0 15px 15px 0;
+    height: 100vh;
+    width: 50%;
+    background-color: var(--cor-principal);
+}
+.btn_mobile_fechar{
+  background-color: transparent;
+  position: absolute;
+  font-size: 20px;
+  top: 0;
+  right: 0;
+  border: 0;
+  border-radius: 13px 0 0 18px;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  transition: .2s;
+  color: var(--cor-nav);
+
+  &:hover{
+    background-color: var(--cor-secundaria);
+  }
+}
+
+.overlay{
+  display: none;
+  background-color: rgba(49, 34, 3, 0.315);
+  z-index: 2;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.animacaoAbrir{
+  animation: abrirMenu .2s linear;
+}
+.animacaoFechar{
+  animation: fecharMenu .2s linear;
+}
+
+@media (width <= 750px){
+  .cabecalho{
+    justify-content: center;
+  }
+  .cabecalho_nav{
+    display: none;
+  }
+  .btn_mobile{
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+  .mobile_nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+}
+@media (width <= 415px){
+  .cabecalho_nav_item{
+    font-size: 14px;
+  }
+}
+
+
+
+
