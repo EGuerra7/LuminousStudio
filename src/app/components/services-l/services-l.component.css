@@ -142,7 +142,8 @@
 
 @media (width <= 403px){
   .solo_foto{
-    width: 70%;
+    width: 240px;
+    height: 250px;
   }
   .services_solo{
     padding: 0 5px;
